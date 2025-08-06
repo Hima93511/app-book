@@ -1,73 +1,142 @@
-# Welcome to your Lovable project
+# 🏥 MediBook - Medical Appointment Booking System
 
-## Project info
+A modern, responsive **medical appointment booking platform** built with **React, TypeScript, TailwindCSS**, and a **role-based authentication system**. Designed for **patients** and **admins** with a clean, professional UI and a premium healthcare theme.
 
-**URL**: https://lovable.dev/projects/3996af6a-4ddd-4ee1-b069-8f71edc9690d
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+### ✅ Core Features
+- 🔐 **Role-Based Authentication**
+  - Patient and Admin roles
+  - Protected routes using `ProtectedRoute` component
+- 📅 **Appointment Booking**
+  - View available slots
+  - Book appointments without conflicts
+- 🏠 **Dashboard**
+  - Patient Dashboard for appointments
+  - Admin Dashboard for managing schedules
+- 🖥️ **Responsive UI**
+  - Optimized for **desktop & mobile**
+  - Dark theme with **premium gradients**
+- 🎨 **Custom Tailwind Design System**
+  - Medical-grade gradients
+  - Interactive hover effects
+  - Smooth animations
+  - Gradient text utilities
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3996af6a-4ddd-4ee1-b069-8f71edc9690d) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend:** React 18, TypeScript, Vite
+- **UI Styling:** TailwindCSS with custom design tokens
+- **Icons:** [Lucide Icons](https://lucide.dev/)
+- **Routing:** React Router DOM
+- **State Management:** React Context API
+- **Authentication:** Context-based role protection
+- **Animations:** Tailwind + CSS keyframes
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📂 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+src/
+├── components/
+│ ├── ui/
+│ ├── Layout.tsx # Premium Header & Main layout
+│
+├── contexts/
+│ └── AuthContext.tsx # Auth logic
+│
+├── routes/
+│ └── ProtectedRoute.tsx # Role-based route protection
+│
+├── pages/
+│ ├── Login.tsx
+│ ├── Dashboard.tsx
+│ ├── Admin.tsx
+│
+├── styles/
+│ └── index.css # Tailwind custom theme
+│
+└── main.tsx
 
-Follow these steps:
+markdown
+Copy
+Edit
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🔑 Protected Routes
 
-# Step 3: Install the necessary dependencies.
-npm i
+- `ProtectedRoute` component restricts access based on:
+  - **Authentication**
+  - **User Role**
+- Redirects users to:
+  - `/login` if unauthenticated
+  - `/admin` or `/dashboard` if role mismatch
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Example:
+```tsx
+<ProtectedRoute requiredRole="admin">
+  <AdminDashboard />
+</ProtectedRoute>
+🎨 Custom Design System
+Premium Gradient Utilities
+
+css
+Copy
+Edit
+.bg-gradient-primary { background: var(--gradient-primary); }
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+Shadow Utilities
+
+css
+Copy
+Edit
+.shadow-glow { box-shadow: var(--shadow-glow); }
+Animations: fadeIn, slideUp, glow
+
+⚡ Getting Started
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/medibook.git
+cd medibook
+2️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+3️⃣ Start Development Server
+bash
+Copy
+Edit
 npm run dev
-```
+✅ Build for Production
+bash
+Copy
+Edit
+npm run build
+npm run preview
+📷 Screenshots
+Home Dashboard
+(Add screenshot here)
 
-**Edit a file directly in GitHub**
+Admin Panel
+(Add screenshot here)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🛡️ License
+This project is licensed under the MIT License.
 
-**Use GitHub Codespaces**
+🤝 Contributing
+Contributions are welcome! Feel free to open issues and submit pull requests.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3996af6a-4ddd-4ee1-b069-8f71edc9690d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🌐 Live Demo
+[🔗 Add your deployed link here]
