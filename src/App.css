@@ -1,0 +1,83 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f3f3f3;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  border-radius: 1.5em;
+  background: linear-gradient(135deg, #232526 0%, #1a2980 100%);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.4);
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #00c6ffcc);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #00ffbbaa);
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: rgba(34, 34, 54, 0.95);
+  border-radius: 1.2em;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.4);
+  color: #f8f8fa;
+  border: 1px solid #6a3093;
+}
+
+.read-the-docs {
+  color: #e0e0e0;
+
+/* Enhance button styles for better contrast */
+button, .btn, .Button {
+  background: linear-gradient(90deg, #6a3093 0%, #a044ff 100%);
+  color: #fff !important;
+  border: none;
+  border-radius: 0.7em;
+  padding: 0.7em 2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+button:hover, .btn:hover, .Button:hover {
+  background: linear-gradient(90deg, #43cea2 0%, #6a3093 100%);
+  color: #fff !important;
+}
+
+/* Make headings more visible */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* For extra contrast on main text */
+p, span, label, .text {
+  color: #f8f8fa;
+}
+}
